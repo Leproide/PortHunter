@@ -61,7 +61,7 @@ PortHunter includes two complementary scripts designed for different use cases:
 | **Banner Grabbing** | Limited to existing ports | Comprehensive for scanned ports |
 | **Confidence Levels** | ✅ Implemented | ❌ Not available |
 | **Multi-Method** | ✅ 4 methods | ❌ Primary method only |
-| **Admin Required** | Recommended | Mandatory |
+| **Admin Required** | Recommended | Recommended |
 | **Use Case** | Security audits, troubleshooting | Penetration testing, discovery |
 
 ## 🔧 Customization
