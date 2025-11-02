@@ -95,6 +95,12 @@ Each script generates timestamped HTML reports:
 $HighRiskPorts = @(21, 22, 23, 25, 53, 135, 139, 443, 445, 993, 995, 1433, 3389, 5900)
 ```
 
+## Screenshot
+<img width="1219" height="832" alt="immagine" src="https://github.com/user-attachments/assets/d6df22ef-a1fe-4c6d-8ef0-8a6da7231a3b" />
+
+<img width="1848" height="917" alt="immagine" src="https://github.com/user-attachments/assets/04b954a9-0db1-44ac-9abf-2b40ded0d0eb" />
+
+
 ## ⚠️ Disclaimer
 
 These tools are designed for authorized security audits and system troubleshooting. Malicious use is strictly prohibited. The authors assume no responsibility for misuse of these tools.
