@@ -64,6 +64,28 @@ PortHunter includes two complementary scripts designed for different use cases:
 | **Admin Required** | Recommended | Recommended |
 | **Use Case** | Security audits, troubleshooting | Penetration testing, discovery |
 
+
+## 📁 Output Structure
+
+Each script generates timestamped HTML reports:
+- **AdvancedPortScan_YYYYMMDD_HHMMSS.html** (PortHunter_Scan)
+- **PortScanReport_YYYYMMDD_HHMMSS.html** (PortHunter_Estabilished)
+
+### Report Sections
+- **📈 Summary** - Scan statistics
+- **🔍 Detailed Analysis** - Port and process table
+- **🚨 High-Risk Ports** - Critical ports highlighted
+- **⚙️ Process Summary** - Grouped by process
+- **🚩 Service Banners** - Service identification banners
+
+
+## Best Practices
+- Always run as Administrator for complete results
+- Verify unknown processes on high-risk ports
+- Analyze service banners for vulnerable versions
+- Keep reports for audits and future comparisons
+
+
 ## 🔧 Customization
 
 ### Modifying High-Risk Ports
