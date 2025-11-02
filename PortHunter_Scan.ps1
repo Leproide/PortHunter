@@ -1,4 +1,4 @@
-﻿<#
+<#
 PortHunter
 leproide@paranoici.org
 
@@ -486,30 +486,61 @@ function New-AdvancedScanHTMLReport {
     # Add protocol styling
     $mainTableHTML = $mainTableHTML -replace '<table>', '<table class="tcp">'
     
-    # Process Summary
-    $processSummary = $ScanResults | 
-        Where-Object { $_.ProcessId -ne $null } |
-        Group-Object ProcessId | 
-        ForEach-Object {
-            $process = $_.Group[0]
-            $ports = $_.Group | ForEach-Object { 
-                $confidenceClass = "confidence-$($_.Confidence.ToLower())"
-                "<span class='$confidenceClass'>$($_.LocalPort)/$($_.Protocol)</span>"
-            }
-            
-            [PSCustomObject]@{
-                ProcessId = $process.ProcessId
-                ProcessName = $process.ProcessName
-                ProcessPath = $process.ProcessPath
-                Ports = ($ports -join ", ")
-                PortCount = $_.Count
-                AvgConfidence = ($_.Group | ForEach-Object { 
-                    switch ($_.Confidence) { "High" { 3 } "Medium" { 2 } "Low" { 1 } }
-                } | Measure-Object -Average).Average
-            }
-        } | Sort-Object AvgConfidence -Descending | Select-Object ProcessId, ProcessName, ProcessPath, Ports, PortCount
-    
-    $processTableHTML = $processSummary | ConvertTo-Html -Fragment -PreContent "<h3>⚙️ Process Portfolio Summary</h3>" | Out-String
+# Process Summary - VERSIONE CORRETTA
+$processSummary = $ScanResults | 
+    Where-Object { $_.ProcessId -ne $null } |
+    Group-Object ProcessId | 
+    ForEach-Object {
+        $process = $_.Group[0]
+        $ports = $_.Group | ForEach-Object { 
+            $confidenceClass = "confidence-$($_.Confidence.ToLower())"
+            "<span class='$confidenceClass'>$($_.LocalPort)/$($_.Protocol)</span>"
+        }
+        
+        [PSCustomObject]@{
+            ProcessId = $process.ProcessId
+            ProcessName = $process.ProcessName
+            ProcessPath = $process.ProcessPath
+            Ports = ($ports -join ", ")
+            PortCount = $_.Count
+            AvgConfidence = ($_.Group | ForEach-Object { 
+                switch ($_.Confidence) { "High" { 3 } "Medium" { 2 } "Low" { 1 } }
+            } | Measure-Object -Average).Average
+        }
+    } | Sort-Object AvgConfidence -Descending
+
+    # Generazione manuale della tabella processi per evitare escaping HTML
+$processTableHTML = @"
+<h3>⚙️ Process Portfolio Summary</h3>
+<table class="tcp">
+<thead>
+<tr>
+<th>Process ID</th>
+<th>Process Name</th>
+<th>Process Path</th>
+<th>Ports</th>
+<th>Port Count</th>
+</tr>
+</thead>
+<tbody>
+"@
+
+foreach ($process in $processSummary) {
+    $processTableHTML += @"
+<tr>
+<td>$($process.ProcessId)</td>
+<td>$($process.ProcessName)</td>
+<td>$($process.ProcessPath)</td>
+<td>$($process.Ports)</td>
+<td>$($process.PortCount)</td>
+</tr>
+"@
+}
+
+$processTableHTML += @"
+</tbody>
+</table>
+"@
     
     # High Risk Ports
     $highRiskResults = $ScanResults | Where-Object { $HighRiskPorts -contains $_.LocalPort } | Sort-Object LocalPort
