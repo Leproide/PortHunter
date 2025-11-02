@@ -19,7 +19,7 @@ param(
     [switch]$NoAdminCheck = $false
 )
 
-# Check for Administrator privileges
+# Check for Administrator privileges 
 if (-not $NoAdminCheck) {
     $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
     if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
