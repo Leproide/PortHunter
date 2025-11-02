@@ -19,7 +19,7 @@ param(
     [switch]$FastScan = $true
 )
 
-# Check for Administrator privileges
+# Check for Administrator privileges 
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Warning "Administrator privileges required for accurate process correlation!"
