@@ -45,10 +45,10 @@ PortHunter includes two complementary scripts designed for different use cases:
 
 ### Key Features
 
-- **📡 Active Port Scanning - TCP/UDP scanning of common ports
-- **🚩 Banner Grabbing - Service identification via banners
-- **🔗 Process Correlation - Port-to-process mapping
-- **📈 Comprehensive Reporting - Detailed statistics and service analysis
+- **📡 Active Port Scanning** - TCP/UDP scanning of common ports
+- **🚩 Banner Grabbing** - Service identification via banners
+- **🔗 Process Correlation** - Port-to-process mapping
+- **📈 Comprehensive Reporting** - Detailed statistics and service analysis
 
 ## 📊 Detailed Comparison
 
@@ -72,3 +72,11 @@ PortHunter includes two complementary scripts designed for different use cases:
 # Edit the $HighRiskPorts variable in scripts
 $HighRiskPorts = @(21, 22, 23, 25, 53, 135, 139, 443, 445, 993, 995, 1433, 3389, 5900)
 ```
+
+## ⚠️ Disclaimer
+
+These tools are designed for authorized security audits and system troubleshooting. Malicious use is strictly prohibited. The authors assume no responsibility for misuse of these tools.
+
+---
+
+**PortHunter** - Your Advanced Port & Process Hunting Companion 🔍
