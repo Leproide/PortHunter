@@ -40,3 +40,35 @@ PortHunter includes two complementary scripts designed for different use cases:
 # Fast scan mode
 .\PortHunter_Scan.ps1 -FastScan
 ```
+
+## 🌐 PortHunter_Estabilished.ps1
+
+### Key Features
+
+- ** 📡 Active Port Scanning - TCP/UDP scanning of common ports
+- ** 🚩 Banner Grabbing - Service identification via banners
+- ** 🔗 Process Correlation - Port-to-process mapping
+- ** 📈 Comprehensive Reporting - Detailed statistics and service analysis
+
+## 📊 Detailed Comparison
+
+| Feature | PortHunter_Scan | PortHunter_Estabilished |
+|---------|-----------------|-------------------------|
+| **Primary Purpose** | Process-port correlation | Service discovery |
+| **Methodology** | Existing connection analysis | Active port scanning |
+| **Ports Analyzed** | Listening ports only | Common ports + active scanning |
+| **Speed** | Seconds | Minutes |
+| **Banner Grabbing** | Limited to existing ports | Comprehensive for scanned ports |
+| **Confidence Levels** | ✅ Implemented | ❌ Not available |
+| **Multi-Method** | ✅ 4 methods | ❌ Primary method only |
+| **Admin Required** | Recommended | Mandatory |
+| **Use Case** | Security audits, troubleshooting | Penetration testing, discovery |
+
+## 🔧 Customization
+
+### Modifying High-Risk Ports
+
+```powershell
+# Edit the $HighRiskPorts variable in scripts
+$HighRiskPorts = @(21, 22, 23, 25, 53, 135, 139, 443, 445, 993, 995, 1433, 3389, 5900)
+```
