@@ -115,7 +115,9 @@ $HighRiskPorts = @(21, 22, 23, 25, 53, 135, 139, 443, 445, 993, 995, 1433, 3389,
 
 ## ⚠️ Disclaimer
 
-These tools are designed for authorized security audits and system troubleshooting. Malicious use is strictly prohibited. The authors assume no responsibility for misuse of these tools.
+These tools are designed for authorized security audits and system troubleshooting.
+Rleased as is without any warranty. 
+The authors assume no responsibility for misuse of these tools.
 
 ---
 
