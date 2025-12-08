@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 ![License](https://img.shields.io/badge/License-GPL%20v2-green.svg)
 
-PortHunter is an advanced PowerShell tool suite for network port analysis and process correlation. It generates professional HTML reports for security audits and system troubleshooting.
+PortHunter is an simple PowerShell tool suite for network port analysis and process correlation. It generates professional HTML reports for security audits and system troubleshooting.
 
 ## 📋 Overview
 
