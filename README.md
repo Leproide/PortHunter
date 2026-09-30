@@ -144,7 +144,8 @@ $DefaultScanPorts  = @( ... )
 ## 📷 Screenshot
 <img width="1219" height="832" alt="PortHunter report" src="https://github.com/user-attachments/assets/d6df22ef-a1fe-4c6d-8ef0-8a6da7231a3b" />
 
-<img width="1848" height="917" alt="PortHunter report" src="https://github.com/user-attachments/assets/04b954a9-0db1-44ac-9abf-2b40ded0d0eb" />
+<img width="1914" height="920" alt="immagine" src="https://github.com/user-attachments/assets/3fced634-fa68-48e8-a534-76318f31775e" />
+
 
 ## ⚠️ Disclaimer
 
