@@ -142,7 +142,7 @@ $DefaultScanPorts  = @( ... )
 ```
 
 ## 📷 Screenshot
-<img width="1219" height="832" alt="PortHunter report" src="https://github.com/user-attachments/assets/d6df22ef-a1fe-4c6d-8ef0-8a6da7231a3b" />
+<img width="1920" height="1057" alt="immagine" src="https://github.com/user-attachments/assets/1b02fa1b-5e83-4eac-9b28-6ce1357b49d4" />
 
 <img width="1914" height="920" alt="immagine" src="https://github.com/user-attachments/assets/3fced634-fa68-48e8-a534-76318f31775e" />
 
