@@ -180,7 +180,7 @@ $KnownUdpServices = @{
 }
 
 # Ports that should normally not be reachable from the network
-$SensitiveTcpPorts = @(21, 23, 135, 139, 445, 1433, 1521, 2375, 3306, 3389, 5432, 5900, 5985, 5986, 6379, 9200, 11211, 27017)
+$SensitiveTcpPorts = @(21, 23, 80, 443, 135, 139, 445, 1433, 1521, 2375, 3306, 3389, 5432, 5900, 5985, 5986, 6379, 9200, 11211, 27017)
 $SensitiveUdpPortsDefault = @(69, 161, 1434)
 
 # Command-line overrides
